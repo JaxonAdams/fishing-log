@@ -37,6 +37,7 @@ body, html {
 .header-container {
     text-align: center;
     backdrop-filter: blur(81.5485px);
+    -webkit-backdrop-filter: blur(81.5485px);
     border-radius: 8px;
     margin: 0 6rem;
     padding: 0 1rem;
