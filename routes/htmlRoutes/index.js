@@ -11,5 +11,10 @@ router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../../public/index.html'));
 });
 
+// serve "add catch" page
+router.get('/new-catch', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../public/add.html'));
+});
+
 // export code
 module.exports = router;

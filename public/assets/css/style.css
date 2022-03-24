@@ -23,6 +23,7 @@ body, html {
     background-color: var(--secondary-color);
 }
 
+/* Homepage Styling */
 .home-header {
     height: 50vh;
     margin: 0;
@@ -91,11 +92,79 @@ body, html {
     color: #f4f4f4;
     font-size: 2rem;
 }
+/* End Homepage Styling */
 
+/* Add Catch Styling */
+.add-header {
+    background-color: var(--primary-color);
+    height: 10vh;
+}
 
+.header-link {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 2rem;
+    text-shadow: 3px 3px 3px black;
+}
+
+.header-link:hover {
+    text-shadow: none;
+}
+
+.home-header-link {
+    position: fixed;
+    top: 1rem;
+    left: 2rem;
+}
+
+.view-header-link {
+    position: fixed;
+    top: 1rem; 
+    right: 2rem;
+}
+
+.add-main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-main h1 {
+    margin: 1.5rem 0;
+}
+
+.add-catch-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    background-color: var(--tertiary-color);
+    padding: 3vh 10vw;
+    border-radius: 20px;
+}
+
+.form-input {
+    background-color: #f4f4f4;
+    padding: 1rem 1.5rem;
+    margin: 2rem;
+    font-size: 18px;
+}
+
+.submit-btn {
+    padding: 20px 80px;
+    font-size: 18px;
+    color: #f4f4f4;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+    color: black;
+}
+/* End Add Catch Styling */
 
 /* Media Queries */
-
 /* media query for smaller desktop screens and smaller */
 @media screen and (max-width: 980px) {}
 
