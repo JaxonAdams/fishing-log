@@ -4,7 +4,7 @@ const express = require('express');
 const router = require('express').Router();
 
 // use css and js files in /public
-router.use(express.static('/public'));
+router.use(express.static('public'));
 
 // serve landing page
 router.get('/', (req, res) => {
