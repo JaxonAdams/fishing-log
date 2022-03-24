@@ -26,7 +26,7 @@ body, html {
 .home-header {
     height: 50vh;
     margin: 0;
-    padding: 0;
+    padding: 5vh 0 0 0;
     background-image: url('../images/home-banner.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -39,6 +39,7 @@ body, html {
     backdrop-filter: blur(81.5485px);
     border-radius: 8px;
     margin: 0 6rem;
+    padding: 0 1rem;
 }
 
 .title, .page-description {
@@ -88,4 +89,31 @@ body, html {
     text-decoration: none;
     color: #f4f4f4;
     font-size: 2rem;
+}
+
+
+
+/* Media Queries */
+
+/* media query for smaller desktop screens and smaller */
+@media screen and (max-width: 980px) {}
+
+/* media query for tablets and smaller */
+@media screen and (max-width: 768px) {
+    body, html {
+        font-size: 12px;
+        overflow: visible;
+    }
+
+    .title {
+        padding-top: 0;
+    }
+}
+
+/*media query for mobile phones and smaller */
+@media screen and (max-width: 575px) {
+    .btn {
+        margin: 1.5rem;
+        padding: 20px 72px;
+    }
 }
