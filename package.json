@@ -1,0 +1,25 @@
+{
+  "name": "fishing-log",
+  "version": "1.0.0",
+  "description": "A Fishing Log Web Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaxonAdams/fishing-log.git"
+  },
+  "author": "Jaxon Adams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaxonAdams/fishing-log/issues"
+  },
+  "homepage": "https://github.com/JaxonAdams/fishing-log#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
