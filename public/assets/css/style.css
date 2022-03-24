@@ -1,0 +1,91 @@
+:root {
+    --primary-font: 'Merriweather', serif;
+    --secondary-font: 'Ubuntu', sans-serif;
+    --primary-color: #5C755E;
+    --secondary-color: #F7DCB4;
+    --tertiary-color: #9C9F84;
+    --quaternary-color: #9C9F84;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body, html {
+    height: 100%;
+    font-size: 18px;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+}
+
+.home-header {
+    height: 50vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/home-banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 8px solid var(--tertiary-color);
+}
+
+.header-container {
+    text-align: center;
+    backdrop-filter: blur(81.5485px);
+    border-radius: 8px;
+    margin: 0 6rem;
+}
+
+.title, .page-description {
+    color: #f4f4f4;
+    text-shadow: 0 0 5px black;
+}
+
+.title {
+    box-sizing: border-box;
+    font-size: 4rem;
+    font-family: var(--secondary-font);
+    padding-top: 3vh;
+}
+
+.page-description {
+    font-family: var(--primary-font);
+    font-style: italic;
+    font-size: 1.2rem;
+    padding: 1.5rem 0;
+}
+
+.main-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: center;
+    background-color: var(--primary-color);
+    margin: 2rem;
+    padding: 40px 125px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px black;
+}
+
+.btn:hover {
+    background-color: var(--quaternary-color);
+    box-shadow: 2px 2px 2px black;
+}
+
+.log-link, .view-link {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 2rem;
+}
