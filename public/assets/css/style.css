@@ -148,8 +148,9 @@ body, html {
 .form-input {
     background-color: #f4f4f4;
     padding: 1rem 1.5rem;
-    margin: 2rem;
+    margin: 1.2rem;
     font-size: 18px;
+    border-radius: 8px;
 }
 
 .submit-btn {
