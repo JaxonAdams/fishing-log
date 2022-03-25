@@ -1,39 +1,8 @@
 // Select form elements to use in script
 const fishContainer = document.querySelector('.fish-container');
+const filterForm = document.querySelector('#filter-form');
 
-// mock fish data for setting up display
-const mockData = {
-    "fish": [
-        {
-            "date": "12/24/2020",
-            "anglerName": "Jaxon",
-            "location": "test location",
-            "fish": "test fish",
-            "lure": "test lure",
-            "id": "0"
-        },
-        {
-            "date": "11/27/2001",
-            "anglerName": "Jaxon",
-            "location": "test location",
-            "fish": "test fish",
-            "lure": "test lure",
-            "id": "1"
-        },
-        {
-            "date": "06/20/2002",
-            "anglerName": "Jaxon",
-            "location": "test location",
-            "fish": "test fish",
-            "lure": "test lure",
-            "id": "0"
-        }
-    ]
-};
-
-// get info on load, then display to page
-// fetch api call here
-
+// set up display for catch info
 const printResults = (resultArr) => {
     console.log(resultArr);
 
@@ -50,4 +19,48 @@ const printResults = (resultArr) => {
     fishContainer.innerHTML = fishHTML.join('');
 };
 
-printResults(mockData.fish);
+// get proper info, including with filter
+const getCatchInfo = (formData = {}) => {
+    let queryUrl = '/api/fish?';
+
+    Object.entries(formData).forEach(([ key, value ]) => {
+        queryUrl += `${key}=${value}&`;
+    });
+
+    console.log(queryUrl);
+
+    fetch(queryUrl)
+        .then(response => {
+            if (!response.ok) {
+                return alert(`Error: ${response.statusText}`);
+            }
+
+            return response.json();
+        })
+        .then(catchData => {
+            console.log(catchData);
+            printResults(catchData);
+        });
+};
+
+// handle filter form submit
+const getCatchInfoSubmit = event => {
+    event.preventDefault();
+
+    const anglerNameHTML = document.querySelector('#angler-name-filter');
+    let anglerName = anglerNameHTML.value;
+
+    const locationHTML = document.querySelector('#location-filter');
+    let location = locationHTML.value;
+
+    const lureHTML = document.querySelector('#lure-filter');
+    let lure = lureHTML.value;
+
+    const catchObject = { anglerName, location, lure };
+
+    getCatchInfo(catchObject);
+};
+
+filterForm.addEventListener('submit', getCatchInfoSubmit);
+
+getCatchInfo();
