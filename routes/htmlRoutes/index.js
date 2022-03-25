@@ -16,5 +16,10 @@ router.get('/new-catch', (req, res) => {
     res.sendFile(path.join(__dirname, '../../public/add.html'));
 });
 
+// serve "view logged catches" page
+router.get('/view-logged-catches', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../public/view.html'));
+});
+
 // export code
 module.exports = router;
