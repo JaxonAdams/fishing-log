@@ -98,6 +98,9 @@ body, html {
 .add-header {
     background-color: var(--primary-color);
     height: 10vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 .header-link {
@@ -123,7 +126,7 @@ body, html {
     right: 2rem;
 }
 
-.add-main {
+.add-main, .view-main {
     min-height: 80vh;
     display: flex;
     flex-direction: column;
@@ -131,11 +134,11 @@ body, html {
     align-items: center;
 }
 
-.add-main h1 {
+.add-main h1, .filter-title, .display-title {
     margin: 1.5rem 0;
 }
 
-.add-catch-form {
+.add-catch-form, #filter-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,7 +150,8 @@ body, html {
 
 .date-container {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
+    align-items: center;
 }
 
 .form-input {
@@ -169,6 +173,37 @@ body, html {
     color: black;
 }
 /* End Add Catch Styling */
+
+/* View Catches Styling */
+.view-page {
+    overflow: auto;
+}
+
+.filter-list {
+    text-align: center;
+}
+
+.view-display {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.filter-title, .display-title {
+    font-size: 2rem;
+}
+
+.display-title {
+    margin-top: 1.5rem;
+}
+
+.info-card {
+    margin: .5rem 0;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    color: #f4f4f4;
+    background-color: var(--tertiary-color);
+}
+/* End View Catches Styling */
 
 /* Media Queries */
 /* media query for smaller desktop screens and smaller */

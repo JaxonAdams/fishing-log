@@ -1,0 +1,12 @@
+{
+    "Fish": [
+        {
+            "date": "12/24/2020",
+            "anglerName": "Jaxon",
+            "location": "test location",
+            "fish": "test fish",
+            "lure": "test lure",
+            "id": "0"
+        }
+    ]
+}

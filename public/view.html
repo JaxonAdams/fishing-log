@@ -15,10 +15,28 @@
 
     <title>View Logged Catches</title>
 </head>
-<body>
+<body class="view-page">
     <header class="add-header">
         <a href="/" class="header-link home-header-link">HOME</a>
         <a href="/new-catch" class="header-link view-header-link">LOG A CATCH</a>
     </header>
+
+    <main class="view-main">
+        <section class="filter-list">
+            <h1 class="filter-title">Filter Your Search</h1>
+            <form class="filter-form" id="filter-form">
+                <input type="text" name="name-filter" id="angler-name-filter" class="form-input" placeholder="Angler's Name">
+                <input type="text" name="location-filter" id="location-filter" class="form-input" placeholder="Location Caught">
+                <input type="text" name="lure-filter" id="lure-filter" class="form-input" placeholder="Lure Used"> 
+                <input type="submit" name="filter-submit" id="filter-submit" class="btn submit-btn">                        
+            </form>
+        </section>
+        <section class="view-display">
+            <h1 class="display-title">Here's what we have...</h1>
+            <div class="fish-container"></div>
+        </section>
+    </main>
+
+    <script src="./assets/js/view.js"></script>
 </body>
 </html>
