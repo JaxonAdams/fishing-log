@@ -17,7 +17,7 @@ router.get('/new-catch', (req, res) => {
 });
 
 // serve "view logged catches" page
-router.get('/view-logged-catches', (req, res) => {
+router.get('/view-caught-fish', (req, res) => {
     res.sendFile(path.join(__dirname, '../../public/view.html'));
 });
 
