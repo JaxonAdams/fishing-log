@@ -25,12 +25,13 @@ const handleCatchFormSubmit = event => {
     .then(response => {
         if (response.ok) {
             return response.json();
+        } else {
+            alert(`Error: Don't forget to fill out every section!`);
         }
-        alert(`Error: ${response.statusText}`);
     })
     .then(postResponse => {
         console.log(postResponse);
-        alert('Thanks for logging your catch!');
+        alert(`Request received!`);
     });
 };
 
