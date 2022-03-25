@@ -145,6 +145,11 @@ body, html {
     border-radius: 20px;
 }
 
+.date-container {
+    display: flex;
+    flex-flow: column wrap;
+}
+
 .form-input {
     background-color: #f4f4f4;
     padding: 1rem 1.5rem;
