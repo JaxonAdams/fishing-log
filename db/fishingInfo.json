@@ -2,7 +2,7 @@
   "fish": [
     {
       "date": "12/24/2020",
-      "anglerName": "Jaxon",
+      "anglerName": "jaxon",
       "location": "test location",
       "fish": "test fish",
       "lure": "test lure",
@@ -10,9 +10,9 @@
     },
     {
       "date": "03/24/2022",
-      "anglerName": "Jaxon",
-      "location": "Sea of Cortez",
-      "fish": "Marlin",
+      "anglerName": "jaxon",
+      "location": "sea of cortez",
+      "fish": "marlin",
       "lure": "trolling",
       "id": 269987846
     }

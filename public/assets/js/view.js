@@ -7,11 +7,23 @@ const printResults = (resultArr) => {
     console.log(resultArr);
 
     const fishHTML = resultArr.map(({ date, anglerName, location, fish, lure, id }) => {
+        const capitalize = str => {
+            return str
+                .split(' ')
+                .map(word => {
+                    return word.substring(0, 1).toUpperCase() + word.substring(1);
+                })
+                .join(' ');
+        }
+
+        let displayFish = fish.substring(0, 1).toUpperCase() + fish.substring(1);
+        let displayLure = lure.substring(0, 1).toUpperCase() + lure.substring(1);
+        
         return `
     <div class="info-card">
         <h4>Caught on ${date}</h4>
-        <h4>Caught by ${anglerName}</h4>
-        <p class="info-card-body">A ${fish} was caught at ${location} with ${lure}.</p>
+        <h4>Caught by ${capitalize(anglerName)}</h4>
+        <p class="info-card-body">Fish Caught: ${capitalize(fish)} || Location: ${capitalize(location)} || Lure: ${capitalize(lure)}</p>
     </div>
         `;
     });
@@ -48,13 +60,13 @@ const getCatchInfoSubmit = event => {
     event.preventDefault();
 
     const anglerNameHTML = document.querySelector('#angler-name-filter');
-    let anglerName = anglerNameHTML.value;
+    let anglerName = anglerNameHTML.value.toLowerCase();
 
     const locationHTML = document.querySelector('#location-filter');
-    let location = locationHTML.value;
+    let location = locationHTML.value.toLowerCase();
 
     const lureHTML = document.querySelector('#lure-filter');
-    let lure = lureHTML.value;
+    let lure = lureHTML.value.toLowerCase();
 
     const catchObject = { anglerName, location, lure };
 
