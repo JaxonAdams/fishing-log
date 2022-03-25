@@ -5,6 +5,7 @@ const path = require('path');
 
 // code for api and html routes
 const htmlRoutes = require('./routes/htmlRoutes');
+const apiRoutes = require('./routes/apiRoutes');
 
 // set up server
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming json data
 app.use(express.json());
 // use proper routes
+app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
 // define PORT
