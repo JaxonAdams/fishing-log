@@ -1,15 +1,7 @@
 {
   "fish": [
     {
-      "date": "12/24/2020",
-      "anglerName": "jaxon",
-      "location": "test location",
-      "fish": "test fish",
-      "lure": "test lure",
-      "id": "0"
-    },
-    {
-      "date": "03/24/2022",
+      "date": "03-24-2022",
       "anglerName": "jaxon",
       "location": "sea of cortez",
       "fish": "marlin",

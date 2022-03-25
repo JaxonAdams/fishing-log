@@ -51,7 +51,10 @@ const getCatchInfo = (formData = {}) => {
         })
         .then(catchData => {
             console.log(catchData);
-            printResults(catchData);
+
+            const displayDataArr = catchData.reverse();
+
+            printResults(displayDataArr);
         });
 };
 
