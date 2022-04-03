@@ -1,7 +1,6 @@
 // required node modules
 const express = require('express');
-const fs = require('fs');
-const path = require('path');
+const sequelize = require('./config/connection');
 
 // code for api and html routes
 const htmlRoutes = require('./routes/htmlRoutes');
@@ -22,7 +21,9 @@ app.use('/', htmlRoutes);
 // define PORT
 const PORT = process.env.PORT || 3001;
 
-// start server and listen for requests
-app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}.`);
+// turn on database and start server
+sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => {
+        console.log(`Server listening on port ${PORT}.`);
+    });
 });
