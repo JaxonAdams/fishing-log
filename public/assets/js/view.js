@@ -6,7 +6,7 @@ const filterForm = document.querySelector('#filter-form');
 const printResults = (resultArr) => {
     console.log(resultArr);
 
-    const fishHTML = resultArr.map(({ date, anglerName, location, fish, lure, id }) => {
+    const fishHTML = resultArr.map(({ date_caught, angler_name, location, fish, lure, id }) => {
         const capitalize = str => {
             return str
                 .split(' ')
@@ -15,14 +15,11 @@ const printResults = (resultArr) => {
                 })
                 .join(' ');
         }
-
-        let displayFish = fish.substring(0, 1).toUpperCase() + fish.substring(1);
-        let displayLure = lure.substring(0, 1).toUpperCase() + lure.substring(1);
         
         return `
     <div class="info-card">
-        <h4>Caught on ${date}</h4>
-        <h4>Caught by ${capitalize(anglerName)}</h4>
+        <h4>Caught on ${date_caught}</h4>
+        <h4>Caught by ${capitalize(angler_name)}</h4>
         <p class="info-card-body">Fish Caught: ${capitalize(fish)} || Location: ${capitalize(location)} || Lure: ${capitalize(lure)}</p>
     </div>
         `;
@@ -33,10 +30,15 @@ const printResults = (resultArr) => {
 
 // get proper info, including with filter
 const getCatchInfo = (formData = {}) => {
-    let queryUrl = '/api/fish?';
+    let queryUrl = '/api/fish-caught?';
 
     Object.entries(formData).forEach(([ key, value ]) => {
-        queryUrl += `${key}=${value}&`;
+        // don't include empty values
+        if (value) {
+            queryUrl += `${key}=${value}&`;
+        } else {
+            queryUrl = queryUrl;
+        }
     });
 
     console.log(queryUrl);
@@ -63,7 +65,7 @@ const getCatchInfoSubmit = event => {
     event.preventDefault();
 
     const anglerNameHTML = document.querySelector('#angler-name-filter');
-    let anglerName = anglerNameHTML.value.toLowerCase();
+    let angler_name = anglerNameHTML.value.toLowerCase();
 
     const locationHTML = document.querySelector('#location-filter');
     let location = locationHTML.value.toLowerCase();
@@ -71,7 +73,7 @@ const getCatchInfoSubmit = event => {
     const lureHTML = document.querySelector('#lure-filter');
     let lure = lureHTML.value.toLowerCase();
 
-    const catchObject = { anglerName, location, lure };
+    const catchObject = { angler_name, location, lure };
 
     getCatchInfo(catchObject);
 };
