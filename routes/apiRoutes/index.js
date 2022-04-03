@@ -2,6 +2,7 @@
 const router = require('express').Router();
 const { filterByQuery, createCatch, validateCatch } = require('../../lib/catchFunctions');
 const { fish } = require('../../db/fishingInfo.json');
+const FishCaughtRoutes = require('./fish-caught-routes');
 
 // get data when page loads or filter request made
 router.get('/fish', (req, res) => {
@@ -25,5 +26,7 @@ router.post('/fish', (req, res) => {
         res.json(fishInfo);
     }
 });
+
+router.use('/fish-caught', FishCaughtRoutes);
 
 module.exports = router;
