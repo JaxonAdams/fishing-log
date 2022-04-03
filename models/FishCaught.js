@@ -12,10 +12,7 @@ FishCaught.init(
         },
         date_caught: {
             type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                isDate: true
-            }
+            allowNull: false
         },
         angler_name: {
             type: DataTypes.STRING,
@@ -26,6 +23,10 @@ FishCaught.init(
             allowNull: false
         },
         lure: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        fish: {
             type: DataTypes.STRING,
             allowNull: false
         }
