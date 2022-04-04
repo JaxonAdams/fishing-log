@@ -5,11 +5,11 @@ const handleCatchFormSubmit = event => {
     event.preventDefault();
 
     // get catch data and organize it
-    const angler_name = addCatchForm.querySelector('[name="angler"]').value.toLowerCase();
-    const date_caught = addCatchForm.querySelector('[name="date"]').value;
-    const location = addCatchForm.querySelector('[name="location"]').value.toLowerCase();
-    const fish = addCatchForm.querySelector('[name="fish"]').value.toLowerCase();
-    const lure = addCatchForm.querySelector('[name="lure"]').value.toLowerCase();
+    const angler_name = addCatchForm.querySelector('[name="angler"]').value.toLowerCase().trim();
+    const date_caught = addCatchForm.querySelector('[name="date"]').value.trim();
+    const location = addCatchForm.querySelector('[name="location"]').value.toLowerCase().trim();
+    const fish = addCatchForm.querySelector('[name="fish"]').value.toLowerCase().trim();
+    const lure = addCatchForm.querySelector('[name="lure"]').value.toLowerCase().trim();
 
     const catchObject = { date_caught, angler_name, location, fish, lure };
 

@@ -22,7 +22,7 @@ app.use('/', htmlRoutes);
 const PORT = process.env.PORT || 3001;
 
 // turn on database and start server
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
     app.listen(PORT, () => {
         console.log(`Server listening on port ${PORT}.`);
     });

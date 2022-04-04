@@ -65,13 +65,13 @@ const getCatchInfoSubmit = event => {
     event.preventDefault();
 
     const anglerNameHTML = document.querySelector('#angler-name-filter');
-    let angler_name = anglerNameHTML.value.toLowerCase();
+    let angler_name = anglerNameHTML.value.toLowerCase().trim();
 
     const locationHTML = document.querySelector('#location-filter');
-    let location = locationHTML.value.toLowerCase();
+    let location = locationHTML.value.toLowerCase().trim();
 
     const lureHTML = document.querySelector('#lure-filter');
-    let lure = lureHTML.value.toLowerCase();
+    let lure = lureHTML.value.toLowerCase().trim();
 
     const catchObject = { angler_name, location, lure };
 
