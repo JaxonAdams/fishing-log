@@ -148,6 +148,10 @@ body, html {
     border-radius: 20px;
 }
 
+#filter-form, #add-catch-form, .filter-card {
+    max-width: 80vw;
+}
+
 .date-container {
     display: flex;
     flex-flow: row wrap;
@@ -213,11 +217,13 @@ body, html {
 @media screen and (max-width: 768px) {
     body, html {
         font-size: 12px;
-        overflow: visible;
+        min-width: 100vw;
+        overflow-y: visible;
+        overflow-x: hidden;
     }
 
     .title {
-        padding-top: 0;
+        font-size: 2rem;
     }
 }
 
