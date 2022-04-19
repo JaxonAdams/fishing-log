@@ -13,7 +13,7 @@
 
 
 ## Description
-This web application is a functional fishing log, allowing anyone to add the fish they catch and some additional information to keep track of what's been catching fish lately. It uses my own server and APIs. It currently only uses a JSON file to store catch information, but I have plans to update it with a relational database such as MySQL or PostgreSQL.
+This web application is a functional fishing log, allowing anyone to add the fish they catch and some additional information to keep track of what's been catching fish lately. It uses my own server and APIs. It uses a MySQL database, with Sequelize used as an Object Relational Mapper.
     
 
 
