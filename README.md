@@ -1,6 +1,6 @@
 
 
-# Jaxon's Fishing Log
+# Angler's Logbook
 
 ![fishing-log](https://user-images.githubusercontent.com/96997462/160699436-4430dbd4-7d6d-42cc-a44f-2d5ebaccafb0.JPG)
 
