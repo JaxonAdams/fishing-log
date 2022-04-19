@@ -3,8 +3,8 @@ const express = require('express');
 const sequelize = require('./config/connection');
 
 // code for api and html routes
-const htmlRoutes = require('./routes/htmlRoutes');
-const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./controllers/htmlRoutes');
+const apiRoutes = require('./controllers/apiRoutes');
 
 // set up server
 const app = express();
