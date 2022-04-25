@@ -3,8 +3,7 @@ const express = require('express');
 const sequelize = require('./config/connection');
 
 // code for api and html routes
-const htmlRoutes = require('./controllers/htmlRoutes');
-const apiRoutes = require('./controllers/apiRoutes');
+const routes = require('./controllers');
 
 // set up server
 const app = express();
@@ -15,8 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming json data
 app.use(express.json());
 // use proper routes
-app.use('/api', apiRoutes);
-app.use('/', htmlRoutes);
+app.use(routes);
 
 // define PORT
 const PORT = process.env.PORT || 3001;

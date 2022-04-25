@@ -32,6 +32,7 @@ const handleCatchFormSubmit = event => {
     .then(postResponse => {
         console.log(postResponse);
         alert(`Request received!`);
+        addCatchForm.reset();
     });
 };
 
