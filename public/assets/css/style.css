@@ -19,8 +19,26 @@
 body, html {
     height: 100%;
     font-size: 18px;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: var(--secondary-color);
+}
+
+.main-header {
+    position: sticky;
+    top: 0;
+    min-height: 10vh;
+    background-color: var(--primary-color);
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.header-link {
+    padding: 0 1rem;
 }
 
 /* Homepage Styling */
@@ -95,14 +113,6 @@ body, html {
 /* End Homepage Styling */
 
 /* Add Catch Styling */
-.add-header {
-    background-color: var(--primary-color);
-    height: 10vh;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-}
-
 .header-link {
     text-decoration: none;
     color: #f4f4f4;
@@ -230,8 +240,8 @@ body, html {
         font-size: 2rem;
     }
 
-    .add-header {
-        height: 7vh;
+    .main-header {
+        min-height: 7vh;
     }
 }
 
