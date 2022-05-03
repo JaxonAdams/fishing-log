@@ -3,7 +3,9 @@ const { FishCaught } = require('../models');
 const sequelize = require('../config/connection');
 
 router.get('/', (req, res) => {
-    FishCaught.findAll()
+    FishCaught.findAll({
+        order: [['date_caught', 'DESC']]
+    })
     .then(dbFishData => {
         const fish = dbFishData.map(fish => fish.get({ plain: true }));
         console.log(fish);
