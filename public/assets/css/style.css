@@ -19,7 +19,7 @@
 body, html {
     height: 100%;
     font-size: 18px;
-    /* overflow: hidden; */
+    overflow: visible;
     background-color: var(--secondary-color);
 }
 
@@ -28,9 +28,14 @@ body, html {
     top: 0;
     min-height: 10vh;
     background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 3;
 }
 
-.header-nav {
+.header-nav ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -38,7 +43,7 @@ body, html {
 }
 
 .header-link {
-    padding: 0 1rem;
+    margin: 0 1rem;
 }
 
 /* Homepage Styling */
@@ -189,9 +194,9 @@ body, html {
 /* End Add Catch Styling */
 
 /* View Catches Styling */
-.view-page {
+/* .view-page {
     overflow: auto;
-}
+} */
 
 .filter-list {
     text-align: center;
@@ -199,7 +204,7 @@ body, html {
 
 .view-display {
     text-align: center;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 .filter-title, .display-title {
@@ -211,7 +216,8 @@ body, html {
 }
 
 .info-card {
-    margin: .5rem 0;
+    width: 50vw;
+    margin: .5rem auto;
     padding: 1rem 2rem;
     border-radius: 8px;
     color: #f4f4f4;
@@ -228,8 +234,8 @@ body, html {
     body, html {
         font-size: 12px;
         min-width: 100vw;
-        overflow-y: visible;
-        overflow-x: hidden;
+        /* overflow-y: visible;
+        overflow-x: hidden; */
     }
 
     .title {
@@ -237,11 +243,11 @@ body, html {
     }
 
     .header-link {
-        font-size: 2rem;
+        font-size: 20px;
     }
 
     .main-header {
-        min-height: 7vh;
+        min-height: 50px;
     }
 }
 
@@ -254,5 +260,12 @@ body, html {
 
     .header-link {
         font-size: 1.5rem;
+    }
+}
+
+/* media query for ridiculously small phones because I am paranoid */
+@media screen and (max-width: 370px) {
+    .header-link {
+        font-size: 1rem;
     }
 }

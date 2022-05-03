@@ -10,4 +10,17 @@
     <a href="/view-caught-fish" class="view-link btn">View Caught Fish</a>
 </div>
 
+<div class="view-display">
+    <h2>Recently Caught</h2>
+    <div class="fish-container">
+        {{#each fish}}
+        <div class="info-card">
+            <h4>Caught on {{date_caught}}</h4>
+            <h4>Caught by {{angler_name}}</h4>
+            <p class="info-card-body">Fish Caught: {{fish}} || Location: {{location}} || Lure: {{lure}}</p>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
 <script src="./assets/js/script.js"></script>
