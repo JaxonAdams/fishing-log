@@ -148,7 +148,8 @@ router.post('/', (req, res) => {
         angler_name: req.body.angler_name,
         location: req.body.location,
         lure: req.body.lure,
-        fish: req.body.fish
+        fish: req.body.fish,
+        user_id: req.body.user_id
     })
     .then(dbFishData => res.json(dbFishData))
     .catch(err => {
