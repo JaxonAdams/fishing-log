@@ -115,6 +115,10 @@ body, html {
     color: #f4f4f4;
     font-size: 2rem;
 }
+
+.button-no-style {
+    cursor: pointer;
+}
 /* End Homepage Styling */
 
 /* Add Catch Styling */

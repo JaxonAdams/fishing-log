@@ -4,6 +4,21 @@ const sequelize = require('./config/connection');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const favicon = require('serve-favicon');
+const session = require('express-session');
+
+// session configuration
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+require('dotenv').config;
+
+const sess = {
+    secret: process.env.SECRET,
+    cookie: {},
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+        db: sequelize
+    })
+};
 
 // code for api and html routes
 const routes = require('./controllers');
@@ -19,6 +34,8 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 // middleware
+// use sessions
+app.use(session(sess));
 // parse incoming data
 app.use(express.urlencoded({ extended: true }));
 // parse incoming json data

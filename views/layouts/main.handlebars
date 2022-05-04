@@ -23,9 +23,15 @@
                     <li>
                         <a href="/" class="header-link home-header-link">ANGLER'S LOGBOOK</a>
                     </li>
+                    {{#if loggedIn}}
                     <li>
-                        <a href="/add-catch" class="header-link view-header-link">LOG A CATCH</a>
+                        <button class="header-link view-header-link button-no-style" id="logout">LOGOUT</button>
                     </li>
+                    {{else}}
+                    <li>
+                        <a href="/add-catch" class="header-link view-header-link">LOGIN</a>
+                    </li>
+                    {{/if}}
                 </ul>
             </nav>
         </header>
@@ -33,5 +39,8 @@
         {{{body}}}
         </main>
     </div>
+    {{#if loggedIn}}
+    <script src="/assets/js/logout.js"></script>
+    {{/if}}
 </body>
 </html>

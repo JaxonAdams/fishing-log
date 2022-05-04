@@ -158,4 +158,24 @@ router.post('/', (req, res) => {
     });
 });
 
+// DELETE a catch /api/fish-caught
+router.delete('/:id', (req, res) => {
+    FishCaught.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbFishData => {
+        if (!dbFishData) {
+            res.status(404).json({ message: 'Fish not found' });
+            return;
+        }
+        res.json(dbFishData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 module.exports = router;
