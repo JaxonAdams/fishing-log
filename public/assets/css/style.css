@@ -157,7 +157,7 @@ body, html {
     margin: 1.5rem 0;
 }
 
-.add-catch-form, #filter-form {
+.add-catch-form, #filter-form, .login-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -167,7 +167,7 @@ body, html {
     border-radius: 20px;
 }
 
-#filter-form, #add-catch-form, .filter-card {
+#filter-form, #add-catch-form, .filter-card, .login-form {
     max-width: 80vw;
 }
 
@@ -194,6 +194,11 @@ body, html {
 .submit-btn:hover {
     background-color: var(--secondary-color);
     color: black;
+}
+
+.login-link {
+    text-align: center;
+    text-shadow: none;
 }
 /* End Add Catch Styling */
 
